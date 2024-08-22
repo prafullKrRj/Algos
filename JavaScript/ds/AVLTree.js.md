@@ -42,9 +42,10 @@ AVLTree.prototype.Node = class {
 };
 
 function insertHelper(self, root, node) {
-   (root === null) {
+   if (root === null) {
       root = node;
-   } else if (node.data < root.data) {
+   } 
+   else if (node.data < root.data) {
       // Go left
       root.left = insertHelper(self, root.left, node)
       // Check for balance factor and perform the appropriate rotation
